@@ -12,6 +12,5 @@ import { CursosComponent } from './cursos.component';
     CommonModule,
   ],
   exports: [CursosComponent],
-  providers: [CursosService],
 })
 export class CursosModule { }
