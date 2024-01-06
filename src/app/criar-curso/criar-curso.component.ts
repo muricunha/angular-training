@@ -24,4 +24,7 @@ export class CriarCursoComponent implements OnInit {
     this.cursosService.addCurso(curso);
   }
 
+  public onRemoveCurso(remCurso: string){
+    this.cursosService.removeCurso(remCurso);
+  }
 }

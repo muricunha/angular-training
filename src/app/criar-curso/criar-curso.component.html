@@ -1,7 +1,7 @@
 
 <input type="text" #cursoInput>
 <button (click)="onAddCurso(cursoInput.value)">Add Curso</button>
-
+<button (click)="onRemoveCurso(cursoInput.value)">Remover Último Curso</button>
 <ul>
   <li *ngFor="let curso of cursos">
     {{curso}}

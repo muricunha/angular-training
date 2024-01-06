@@ -21,7 +21,6 @@ export class CursosComponent implements OnInit {
 
   CursosService.criouNovoCurso.subscribe(
     curso => this.cursos.push(curso)
-
   );
   }
 

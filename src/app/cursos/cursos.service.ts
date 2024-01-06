@@ -8,6 +8,8 @@ export class CursosService {
   emitirCursoCriado = new EventEmitter<string>();
   static criouNovoCurso = new EventEmitter<string>();
 
+  emitirRemoveCurso = new EventEmitter<string>();
+
   private cursos: string[] = ['Angular 2', 'Java', 'Phyton'];
 
   constructor(private logService: LogService){
@@ -23,5 +25,10 @@ export class CursosService {
     this.cursos.push(curso);
     this.emitirCursoCriado.emit(curso);
     CursosService.criouNovoCurso.emit(curso);
+  }
+
+  removeCurso(curso: string){
+    this.cursos.pop();
+    this.emitirRemoveCurso.emit(curso);
   }
 }
